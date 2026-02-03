@@ -8,8 +8,33 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-
+    <header class="container py-3">
+            <h1 class="text-center">
+                The form
+            </h1>
     </header>
+
+    <main class="container">
+        <form action="https://httpbin.org/post" method="POST" class="px-3 d-flex flex-column gap-3" novalidate>
+            <div class="form-floating">
+                <input type="text" name="firstName" id="first-name" class="form-control" placeholder="First name" required>
+                <label for="first-name">First name</label>
+                <div class="invalid-feedback">Please enter a valid first name</div>
+            </div>
+            <div class="form-floating">
+                <input type="text" name="lastName" id="last-name" class="form-control" placeholder="Last name" required>
+                <label for="last-name">Last name</label>
+                <div class="invalid-feedback">Please enter a valid Last name</div>
+            </div>
+            <div class="form-floating">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+                <label for="email">Email</label>
+                <div class="invalid-feedback">Please enter a valid Email</div>
+            </div>
+            <button class="btn btn-primary align-self-start" type="submit">Submit</button>
+        </form>
+    </main>
+
+    <script src="./form.js" defer></script>
 </body>
 </html>
